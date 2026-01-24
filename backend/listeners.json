@@ -1,0 +1,13 @@
+{
+  "name": "3yv0ynxr",
+  "lHost": "10.229.40.10",
+  "lPort": "80",
+  "rPort": "80",
+  "rHost": [
+    "10.229.40.130"
+  ],
+  "exploit": "0",
+  "payload": "False",
+  "status": "Active",
+  "startTime": "2025-11-20T05:36:23.951Z"
+}
